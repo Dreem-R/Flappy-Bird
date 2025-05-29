@@ -46,7 +46,7 @@ public class Birdscript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isBirdAlive == true)
+        if (isBirdAlive == true && collision.gameObject.layer == LayerMask.NameToLayer("Hittable"))
         {
             soundManager.PlaySFX(soundManager.death);
             LogicScript.gameoverscreen();
