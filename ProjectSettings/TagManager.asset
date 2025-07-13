@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Logic
   - Soundfx
+  - Target
   layers:
   - Default
   - TransparentFX

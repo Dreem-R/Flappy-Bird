@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -5,6 +6,7 @@ public class BulletScript : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb;
     public LogicScript LogicScript;
+    public GameObject ImpactEffect;
 
     void Start()
     {
@@ -34,6 +36,8 @@ public class BulletScript : MonoBehaviour
             Destroy(collision.gameObject); // Destroy the enemy on collision
             Destroy(gameObject); // Destroy the bullet on hit
             LogicScript.addscore(1); // Increment the score by 1
+
+            Instantiate(ImpactEffect, transform.position, transform.rotation); // Instantiate impact effect
         }
     }
 }
