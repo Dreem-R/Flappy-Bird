@@ -4,7 +4,7 @@ public class BulletScript : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,6 +18,16 @@ public class BulletScript : MonoBehaviour
         {
             Debug.Log("Bullet Deleted");
             Destroy(gameObject); // Destroy the bullet if it goes out of bounds
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Target"))
+        {
+            Debug.Log("Hit Target");
+            Destroy(collision.gameObject); // Destroy the enemy on collision
+            Destroy(gameObject); // Destroy the bullet on hit
         }
     }
 }
