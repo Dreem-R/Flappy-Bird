@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2099683823517902696}
   - component: {fileID: 2971855833368419027}
   - component: {fileID: 441458745125390248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BottomPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LogicScript: {fileID: 0}
+  birdobj: {fileID: 0}
 --- !u!1 &3165891820527680595
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ GameObject:
   - component: {fileID: 3590844289063232441}
   - component: {fileID: 4822354601887081119}
   - component: {fileID: 8849820588011144039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TopPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}

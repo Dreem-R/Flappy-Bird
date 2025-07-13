@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 213808286}
   - component: {fileID: 213808288}
   - component: {fileID: 213808287}
+  - component: {fileID: 213808289}
   m_Layer: 3
   m_Name: Birdbody
   m_TagString: Player
@@ -501,7 +502,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1682864634}
+  - {fileID: 1874582641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &213808286
@@ -583,6 +584,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.09, y: -0.43}
   m_Radius: 2.1
+--- !u!114 &213808289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213808283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46abf045a7e0e14c9b0fb65846c5002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepoint: {fileID: 1874582641}
+  bulletPrefab: {fileID: 8607365238439718763, guid: 06b4b50a6c826144ca2270ccabf96c1a, type: 3}
 --- !u!1 &249833561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2133,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 565201844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1682864633
+--- !u!1 &1874582640
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2126,43 +2141,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1682864634}
-  - component: {fileID: 1682864635}
+  - component: {fileID: 1874582641}
   m_Layer: 3
-  m_Name: FirePoint
+  m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1682864634
+--- !u!4 &1874582641
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682864633}
+  m_GameObject: {fileID: 1874582640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -1.19, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 3.53, y: -1.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 213808285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1682864635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682864633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11fc0db4dbb26d9478386e10cced7b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawnpt: {fileID: 0}
 --- !u!1 &1922954183
 GameObject:
   m_ObjectHideFlags: 0
