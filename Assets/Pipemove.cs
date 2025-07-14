@@ -21,4 +21,9 @@ public class Pipemove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void PipeOpen()
+    {
+
+    }
 }

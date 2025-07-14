@@ -4,9 +4,9 @@ public class PipeSpawn : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject thepipe;
-    public float spawnrate = 2;
+    public float spawnrate = 5;
     private float timer = 0;
-    public float heightoffset = 10;
+    public float heightoffset = 8;
 
     void Start()
     {
@@ -35,4 +35,5 @@ public class PipeSpawn : MonoBehaviour
         Instantiate(thepipe, new Vector3(transform.position.x, Random.Range(lowestpoint, highestpoint)), transform.rotation);
 
     }
+
 }
