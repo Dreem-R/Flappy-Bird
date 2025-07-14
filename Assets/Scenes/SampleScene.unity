@@ -597,7 +597,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 1874582641}
+  Bird: {fileID: 0}
   bulletPrefab: {fileID: 8607365238439718763, guid: 06b4b50a6c826144ca2270ccabf96c1a, type: 3}
+  Birdscript: {fileID: 0}
 --- !u!1 &249833561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,8 +1021,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thepipe: {fileID: 6150127308821775843, guid: 4b69be0c960c0a046a9639b74a5e3c4e, type: 3}
-  spawnrate: 2
+  spawnrate: 3
   heightoffset: 2.5
+  openDistance: 2
+  openSpeed: 3
 --- !u!4 &704544529
 Transform:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class PipeSpawn : MonoBehaviour
     public float spawnrate = 5;
     private float timer = 0;
     public float heightoffset = 8;
+    public float openDistance = 2f;
+    public float openSpeed = 3f;
 
     void Start()
     {

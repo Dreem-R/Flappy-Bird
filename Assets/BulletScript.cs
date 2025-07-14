@@ -45,6 +45,13 @@ public class BulletScript : MonoBehaviour
             impactPosition = new Vector3(impactPosition.x+1.2f, impactPosition.y, 0); // Changing X axis to shift impact closer to pipe
             GameObject impact = Instantiate(ImpactEffect, impactPosition, transform.rotation); // Instantiate impact effect
             impact.transform.SetParent(collision.transform.parent);
+
+            Pipemove pipeScript = collision.transform.GetComponentInParent<Pipemove>();
+            if (pipeScript != null)
+            {
+                pipeScript.PipeOpen();
+            }
+
         }
     }
 }
