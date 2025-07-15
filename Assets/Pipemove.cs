@@ -13,7 +13,6 @@ public class Pipemove : MonoBehaviour
 
     private Vector3 topTarget;
     private Vector3 bottomTarget;
-    private bool targetsSet = false;
 
     void Start()
     {
@@ -51,12 +50,8 @@ public class Pipemove : MonoBehaviour
     }
     public void PipeOpen()
     {
-        if (!targetsSet)
-        {
-            topTarget = new Vector3(0, Toppipe.localPosition.y + openDistance, 0);
-            bottomTarget = new Vector3(0, Bottompipe.localPosition.y - openDistance, 0);
-            targetsSet = true;
-        }
+        topTarget = new Vector3(0, Toppipe.localPosition.y + openDistance, 0);
+        bottomTarget = new Vector3(0, Bottompipe.localPosition.y - openDistance, 0);
         isOpening = true;
         Debug.Log("PipeOpen Called");
     }
