@@ -9,7 +9,9 @@ public class Pipemove : MonoBehaviour
     public Transform Bottompipe;
     public bool isOpening = false;
     public float openDistance = 10f;
+    public float EasyOpen = 10f;
     public float openSpeed = 30f;
+    public GameObject targetObject;
 
     private Vector3 topTarget;
     private Vector3 bottomTarget;

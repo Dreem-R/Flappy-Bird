@@ -7,10 +7,12 @@ public class MenuScript : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown dp;
     public Difficulty LevelSelected;
+    private GameManager gameManager;
 
     void Start()
     {
-           LevelSelected = Difficulty.Easy;
+        gameManager = GameManager.Instance;
+        LevelSelected = Difficulty.Easy;
     }
     public void Playgame()
     {
@@ -35,6 +37,7 @@ public class MenuScript : MonoBehaviour
             LevelSelected = Difficulty.Hard;
             Debug.Log("Hard Selected");
         }
+        gameManager.changedifficulty(LevelSelected);
     }
     public void QuitGame()
     {

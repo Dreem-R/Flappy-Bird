@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+
+    public void changedifficulty(Difficulty NewDifficulty)
+    {
+        currentDifficulty = NewDifficulty;
+    }
 }
 
 

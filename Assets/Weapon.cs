@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Birdscript.getbird())
+        if (Input.GetMouseButtonDown(0) && Birdscript.getbird() && GameManager.Instance.currentDifficulty == Difficulty.Hard)
         {
             Shoot();
         }

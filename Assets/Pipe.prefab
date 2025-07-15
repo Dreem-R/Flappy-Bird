@@ -304,7 +304,9 @@ MonoBehaviour:
   Bottompipe: {fileID: 2099683823517902696}
   isOpening: 0
   openDistance: 2
+  EasyOpen: 3
   openSpeed: 5
+  targetObject: {fileID: 4315455496960293844}
 --- !u!1001 &4540917753943060115
 PrefabInstance:
   m_ObjectHideFlags: 0
