@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1; // Reset time scale
         gameManager = GameManager.Instance;
         LevelSelected = Difficulty.Easy;
     }

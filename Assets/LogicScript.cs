@@ -77,6 +77,7 @@ public class LogicScript : MonoBehaviour
 
     public void exit()
     {
-        Application.Quit();
+        Time.timeScale = 1; // Reset time scale
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
