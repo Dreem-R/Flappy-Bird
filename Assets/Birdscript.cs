@@ -8,6 +8,10 @@ public class Birdscript : MonoBehaviour
     public float flapspeed;
     public LogicScript LogicScript;
     public bool isBirdAlive = true;
+    private bool isImmune = false;
+    private float immuneDuration = 3f;
+    private float immuneCooldown = 15f;
+    private float lastAbilityUseTime = -Mathf.Infinity;
     Sound_Manager soundManager;
 
     private void Awake()
@@ -28,17 +32,44 @@ public class Birdscript : MonoBehaviour
             myRigidbody2D.linearVelocity = Vector2.up * flapspeed;
             soundManager.PlaySFX(soundManager.flap);
         }
-
-        else if (Input.GetKeyDown(KeyCode.Escape)){
+        else if (Input.GetKeyDown(KeyCode.E) && Time.time >= lastAbilityUseTime + immuneCooldown)
+        {
+            Debug.Log("E pressed");
+            ActivateImmunity();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
             LogicScript.pause();
         }
 
-        if((myRigidbody2D.transform.position.y > 4.4 || myRigidbody2D.transform.position.y < -5 ) && isBirdAlive==true)
+        if ((myRigidbody2D.transform.position.y > 4.4 || myRigidbody2D.transform.position.y < -5) && isBirdAlive == true)
         {
-            isBirdAlive=false;
+            isBirdAlive = false;
             LogicScript.gameoverscreen();
         }
-        
+
+    }
+    private void ActivateImmunity()
+    {
+        isImmune = true;
+        lastAbilityUseTime = Time.time;
+
+        // Change to immune layer
+        gameObject.layer = LayerMask.NameToLayer("ImmuneBird");
+
+        // visual effect
+        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+
+        Invoke(nameof(EndImmunity), immuneDuration);
+    }
+
+    private void EndImmunity()
+    {
+        isImmune = false;
+
+        gameObject.layer = LayerMask.NameToLayer("Bird");
+
+        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
     }
     public bool getbird()
     {
