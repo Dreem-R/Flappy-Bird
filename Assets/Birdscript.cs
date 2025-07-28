@@ -62,6 +62,7 @@ public class Birdscript : MonoBehaviour
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
 
         Invoke(nameof(EndImmunity), immuneDuration);
+        ui_script.GhostActive();
     }
 
     private void EndImmunity()
@@ -71,7 +72,6 @@ public class Birdscript : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Bird");
 
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-        ui_script.Ghostused();
     }
     public bool getbird()
     {
