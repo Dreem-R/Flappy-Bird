@@ -5,6 +5,7 @@ public class Birdscript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Rigidbody2D myRigidbody2D;
+    public UI_Script ui_script;
     public float flapspeed;
     public LogicScript LogicScript;
     public bool isBirdAlive = true;
@@ -55,7 +56,7 @@ public class Birdscript : MonoBehaviour
         lastAbilityUseTime = Time.time;
 
         // Change to immune layer
-        gameObject.layer = LayerMask.NameToLayer("ImmuneBird");
+        gameObject.layer = LayerMask.NameToLayer("ImmuneBIrd");
 
         // visual effect
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
@@ -70,6 +71,7 @@ public class Birdscript : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Bird");
 
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        ui_script.Ghostused();
     }
     public bool getbird()
     {
