@@ -38,7 +38,7 @@ public class UI_Script : MonoBehaviour
             timer += Time.deltaTime;
             Ghosticon.fillAmount = timer / GHostabilityCoolDown;
 
-            if (timer >= Ghostabilitytimer)
+            if (timer >= GHostabilityCoolDown)
             {
                 timer = 0;
                 isghostoff = false;
